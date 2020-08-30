@@ -107,7 +107,7 @@ abstract class PacketPlayOut {
             if (clazz == null) return null
             for (count in parameterCount) {
                 for (c in clazz.constructors) {
-                    if (c.parameterCount === count) return c
+                    if (c.parameterCount == count) return c
                 }
             }
             return null

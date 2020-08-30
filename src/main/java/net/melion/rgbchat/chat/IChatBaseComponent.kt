@@ -123,7 +123,6 @@ class IChatBaseComponent {
             }
             component.setText(builder.toString())
             components.add(component)
-            println(components.toString())
             return IChatBaseComponent("").setExtra(components)
         }
 
@@ -339,17 +338,12 @@ class IChatBaseComponent {
         }
         //the core component, fixing all colors
         if (color != null) {
-            println("Color != null")
             jsonObject["color"] = color!!.toString(clientVersion)
-            println(color!!.toString(clientVersion))
         }
         if (extra != null) {
-            println("Extra != null")
             for (extra in extra!!) {
                 if (extra!!.color != null) {
-                    println("ExtraColor != null")
                     extra.jsonObject["color"] = extra.color!!.toString(clientVersion)
-                    println(extra.color!!.toString(clientVersion))
                 }
             }
         }
