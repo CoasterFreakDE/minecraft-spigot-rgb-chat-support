@@ -22,6 +22,14 @@
     </properties>
     <url>https://melion.net</url>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub F1b3rDEV Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/F1b3rDEV/minecraft-spigot-rgb-chat-support</url>
+        </repository>
+    </distributionManagement>
+
     <build>
         <plugins>
             <plugin>
