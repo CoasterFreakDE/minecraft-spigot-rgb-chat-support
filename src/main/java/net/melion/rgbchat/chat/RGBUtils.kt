@@ -1,9 +1,11 @@
 package net.melion.rgbchat.chat
 
+import net.md_5.bungee.api.ChatColor
 import java.util.regex.Pattern
 
 
 object RGBUtils {
+    private val hex = Pattern.compile("#[0-9a-fA-F]{6}")
     private val fix2 = Pattern.compile("\\{#[0-9a-fA-F]{6}\\}")
     private val fix3 = Pattern.compile("\\&x[\\&0-9a-fA-F]{12}")
     private val gradient1 = Pattern.compile("<#[0-9a-fA-F]{6}>[^<]*</#[0-9a-fA-F]{6}>")
@@ -21,6 +23,16 @@ object RGBUtils {
         text = fixFormat3(text)
         text = setGradient1(text)
         text = setGradient2(text)
+        return text
+    }
+
+    fun toChatColorString(textInput: String): String {
+        var text = applyFormats(textInput)
+        val m = hex.matcher(text)
+        while (m.find()) {
+            val hexcode = m.group()
+            text = text.replace(hexcode, ChatColor.of(hexcode).toString())
+        }
         return text
     }
 
