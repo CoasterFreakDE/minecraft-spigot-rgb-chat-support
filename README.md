@@ -1,5 +1,5 @@
 # minecraft-spigot-rgb-chat-support
-Use RGB Color Codes in Chat. Requires Minecraft Java 1.16.2
+Use RGB Color Codes in Chat. Requires Minecraft Java 1.16+
 
 Just a simple utility package to send colored rgb text into a minecraft chat.
 
@@ -11,7 +11,7 @@ Gradients:
 
 
 Usage:
-- `RGBApi.sendChatMessage(spigotPlayer, rawChatMessageWithColorCodes)`
+- `player.sendMessage(*TextComponent.fromLegacyText(RGBApi.toColoredMessage(rawChatMessageWithColorCodes)))`
 
 
 ![Chat Gradient](https://i.imgur.com/ASTODE7.png)
