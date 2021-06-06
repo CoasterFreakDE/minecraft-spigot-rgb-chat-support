@@ -30,7 +30,7 @@ repositories {
 #### Add it to your dependencies
 ```
 dependencies {
-    compile 'com.github.F1b3rDEV:minecraft-spigot-rgb-chat-support:1.0.5'
+    compile 'com.github.CoasterFreakDE:minecraft-spigot-rgb-chat-support:1.0.5'
 }
 ```
 
@@ -49,7 +49,7 @@ dependencies {
 #### Add it to your dependencies
 ```
 <dependency>
-	<groupId>com.github.F1b3rDEV</groupId>
+	<groupId>com.github.CoasterFreakDE</groupId>
 	<artifactId>minecraft-spigot-rgb-chat-support</artifactId>
 	<version>1.0.5</version>
 </dependency>
